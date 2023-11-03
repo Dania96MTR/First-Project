@@ -86,18 +86,26 @@ const getTrips = async () => {
     const data = await res.json()
     const Data = data.Trips
     
-    const titles = document.querySelectorAll(".title")
-searchBtn.addEventListener("keyup" , ele =>{
-    const e = ele.target.value.toLowerCase()
-    titles.forEach(title =>{
-        console.log(title)
-
-        if (title.querySelector(".group").textContent.toLocaleLowerCase().startsWith(e) ) {
-            console.log(true)
+    
+    const searchInp = document.querySelector("#search-inp")
+    searchInp.addEventListener("input" , filterBook)
+    function filterBook(){
+        
+        const searchInp = document.querySelector("#search-inp")
+        const filter = searchInp.value.toLowerCase()
+        const titles = document.querySelectorAll(".title")
+        titles.forEach(item =>{
+            let text = item.textContent
+            if(text.toLowerCase().includes(filter.toLowerCase())){
+                item.style.display = ''
+                console.log(item)
+            } else{
+                item.style.display = 'none'
+            }
             
-        }  else console.log(false)
-    })
-})
+        })
+
+    }
     Data.forEach(ele => {
         trip.innerHTML += 
         `
