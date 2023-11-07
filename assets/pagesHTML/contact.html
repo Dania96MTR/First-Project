@@ -62,20 +62,43 @@
             <span>t</span>
         </h1>
         <div class="row">
-            <form action="">
+            <form action="" onsubmit="sendmsg()"  reset()  return false>
                 <div class="input">
-                    <input type="text" placeholder="name" required>
-                    <input type="email" placeholder="email" required>
+                    <input type="text" placeholder="name" required id="name">
+                    <input type="email" placeholder="email" required id="email">
                 </div>
                 <div class="input">
-                    <input type="number" placeholder="number" required>
-                    <input type="text" placeholder="subject" required>
+                    <input type="number" placeholder="number" required id="number">
+                    <input type="text" placeholder="subject" required id="subject">
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="message" required></textarea>
+                <textarea name="" id="msg" cols="30" rows="10" placeholder="message" required></textarea>
                 <input type="submit" class="btn fs-3">
             </form>
         </div>
     </section>
+
+
+
+    <script>
+        function sendmsg(){
+            let number = "+963949623971"
+            let name = document.querySelector("#name")
+            let num = document.querySelector("#number")
+            let email = document.querySelector("#email")
+            let subject = document.querySelector("#subject")
+            
+
+            var url = "https://wa.me/" + number + "?text="
+            + "Name: " + name.value+ "%0a"
+                + "Email: " + email.value+ "%0a"
+                + "Number: " + num.value+ "%0a"
+                + "subject: " + subject.value+ "%0a"
+                window.alert("Message Sent Succesfully")
+                window.open(url , '_blank').focus()
+                
+        }
+        
+    </script>
 
     
 </body>

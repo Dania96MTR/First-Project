@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Now</title>
     <link rel="stylesheet" href="../libraries/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/home.css">
-    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
+
 <body>
 
     <header class="nav-bar d-flex flex-row p-3 justify-content-between align-items-center gap-20">
@@ -57,32 +60,32 @@
             <span>o</span>
             <span>o</span>
             <span>k</span>
-            &nbsp;
-            <span>N</span>
-            <span>o</span>
-            <span>w</span>
         </h1>
 
         <div class="row">
             <div class="image">
                 <img src="../images/pic2.jpg" alt="">
             </div>
-            <form action="" class="form-book" >
+            <form action="" class="form-book" onsubmit="sendEmail()"  reset()  return false>
                 <div class="input">
                     <h3>Your name</h3>
-                    <input type="text" placeholder="name" required>
+                    <input type="text" placeholder="name" id="name" required>
                 </div>
                 <div class="input">
                     <h3>Your number</h3>
-                    <input type="number" placeholder="number" required>
+                    <input type="number" placeholder="number" id="number" required>
+                </div>
+                <div class="input">
+                    <h3>Your email</h3>
+                    <input type="email" placeholder="email" id="email" required>
                 </div>
                 <div class="input">
                     <h3>Where to go</h3>
-                    <input class="input-place" type="text" placeholder="place name" required> 
+                    <input class="input-place" type="text" placeholder="place name" id="trip" required>
                 </div>
                 <div class="input">
                     <h3>How many</h3>
-                    <input type="text" placeholder="number of people" required>
+                    <input type="text" placeholder="number of people" id="number-people" required>
                 </div>
                 <div class="input">
                     <input type="submit" class="btn" value="book now" required>
@@ -92,6 +95,28 @@
     </section>
 
 
+    
+    <script>
+        function sendEmail(){
+            let number = "+963949623971"
+            let name = document.querySelector("#name")
+            let num = document.querySelector("#number")
+            let email = document.querySelector("#email")
+            let trip = document.querySelector("#trip")
+            let numberOfPeople = document.querySelector("#number-people")
+
+            var url = "https://wa.me/" + number + "?text="
+            + "Name: " + name.value+ "%0a"
+                + "Email: " + email.value+ "%0a"
+                + "Number: " + num.value+ "%0a"
+                + "Trip: " + trip.value+ "%0a"
+                + "Number of people: " + numberOfPeople.value+ "%0a"
+                window.alert("Message Sent Succesfully")
+                window.open(url , '_blank').focus()
+                
+        }
+        
+    </script>
 </body>
 <script src="../libraries/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

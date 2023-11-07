@@ -52,23 +52,27 @@ logo.addEventListener("click" , ()=>{
     window.open("./home.html")
 })
 
-function myFunction() {
-    var dots = document.querySelector(".dots");
-    var moreText = document.querySelector(".more");
-    var btnText = document.querySelector(".my-btn");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
+
+let noofChar = 50
+let paragraphs = document.querySelectorAll(".paragraph")
+paragraphs.forEach(para =>{
+    if(para.textContent.length < noofChar){
+        para.nextElementSibling.style.display = "none"
     }
-  }
-  
-  
+    else{
+        let displayText = para.textContent.slice(0,noofChar)
+        let moreText = para.textContent.slice(noofChar)
+        para.innerHTML = `${displayText}<span class="dots">...</span><span class="hide more">${moreText}</span>`
+    }
+})
+function readMore(btn){
+    let post =  btn.parentElement
+    post.querySelector(".dots").classList.toggle("hide")
+    post.querySelector(".more").classList.toggle("hide")
+    btn.textContent == "Read More" ? btn.textContent = "Read less" : btn.textContent = "Read More"
+
+}
+
 
 
  fetch("home.json")
@@ -76,9 +80,7 @@ function myFunction() {
 .then(data => {
     let dataAsString = JSON.stringify(data)
     localStorage.setItem('trips' , dataAsString)
-    dataAsString = localStorage.getItem('trips')
-    let dataAsObj =JSON.parse(dataAsString)
-   
+    dataAsString = localStorage.getItem('trips')   
 })
  
 const getTrips = async () => {
@@ -98,7 +100,7 @@ const getTrips = async () => {
             let text = item.textContent
             if(text.toLowerCase().includes(filter.toLowerCase())){
                 item.style.display = ''
-                console.log(item)
+                console.log(text)
             } else{
                 item.style.display = 'none'
             }
@@ -112,20 +114,19 @@ const getTrips = async () => {
         <div class="group d-flex flex-column align-items-start" >
              <div class="content-img"><img class="trip-img" src= "${ele.image}"></div>
               <div class="trip-information">
-                  <h2 class ="title">${ele.title}</h2>
+                  <h2 class ="title"  id=${ele.id}>${ele.title}</h2>
                   <p>Arrival: ${ele.Arrival}</p>
                   <p>Leaving: ${ele.Leaving}</p>
                   <span class="price">price: $${ele.price}</span> 
                  </div>
                 <div>
-                   <button class="btn" id=${ele.id}>Book</button>
+                   <button class="btn">Book</button>
                 </div>
         </div>`
     });
 }
 
 getTrips()
-
 
 
 trip.addEventListener("click" , () =>{
@@ -135,15 +136,3 @@ trip.addEventListener("click" , () =>{
 let myAudio = document.querySelector(".my-audio")
 myAudio.volume = 0.1
 
-/* const titles = document.querySelectorAll(".title")
-searchBtn.addEventListener("keyup" , ele =>{
-    const e = ele.target.value.toLowerCase()
-    titles.forEach(title =>{
-        console.log(title)
-
-        if (title.querySelector(".trip-information").textContent.toLocaleLowerCase().startsWith(e) ) {
-            return title
-            
-        }  
-    })
-}) */

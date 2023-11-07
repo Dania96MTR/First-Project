@@ -163,10 +163,10 @@ header .search-form label:hover {
     display: inline-block;
     margin-top: 1rem;
     color: var(--blue);
-    padding: .8rem 3rem;
+    padding: .6rem 1.5rem;
     border: .2rem solid var(--blue);
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     background-color: rgba(255, 165, 0, .2);
 }
 
@@ -354,8 +354,8 @@ video {
 .book .row .image {
     flex: 1 1 20rem;
     width: 50%;
-    height: 100%;
-}
+/*     height: 100%;
+ */}
 
 .book .row .image img {
     width: 100%;
@@ -397,8 +397,7 @@ video {
 }
 
 .package .container .box {
-/*     position: relative;
- */    border-radius: .5rem;
+   border-radius: .5rem;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;
     -ms-border-radius: .5rem;
@@ -421,9 +420,6 @@ video {
     flex-direction: column;
     align-items: flex-start;
     gap: .3rem;
-}
-.package .container .box .content .more{
-    display: none;
 }
 
 .package .container .box .content h3 {
@@ -454,7 +450,9 @@ video {
     color: #333;
     padding-top: 1rem;
 }
-
+.hide{
+    display: none;
+}
 
 
 
@@ -662,7 +660,18 @@ video {
 
 
 
-
+@media (max-width:300px){
+    .footer .box a {
+        font-size: .3rem !important;
+        padding: 0 !important;
+    }
+}
+@media (min-width:300px) and (max-width:470px){
+    .footer .box a {
+        font-size: .5rem !important;
+        padding: 0 !important;
+    }
+}
 
 
 
@@ -700,4 +709,1398 @@ video {
         -o-border-radius: .5rem;
     }
 
+}
+
+@media (max-width:320px) {
+    .nav-bar {
+        font-size: 13px;
+    }
+    #menu-bar {
+        font-size: 1rem !important;
+        padding: 0.3rem 0.3rem !important;
+        display: block !important;
+    }
+    .logo {
+        font-size: 13px;
+    }
+    header.p-3 {
+        padding: 0.5rem!important;
+    }
+    
+    header .icon i {
+        margin-right: .6rem;
+    }
+    header .search-form {
+        padding: 0.5rem 1rem;
+        font-size: .5rem;
+    }
+   
+    .login-form #form-close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .login-form form {
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+        width: 30rem;
+    }
+    
+    .login-form form h3 {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    
+    .login-form form .box {
+        font-size: .7rem;
+    }
+    
+    
+    .login-form form label {
+        font-size: .7rem;
+    }
+    
+    .login-form form p {
+        font-size: .7rem;
+    }
+    .carousel{
+        margin-top: 2.5rem;
+    }
+    .carousel,
+    .book,
+    .activity {
+        margin-bottom: 5rem;
+    }
+    section {
+        padding: 1rem 5%;
+    }
+    .why-book h3{
+        font-size: 20px;
+    }
+    .why-book .d-flex{
+        flex-direction: column !important;
+        gap: 8px !important;
+        align-items: center !important;
+        margin-bottom: 0px !important;
+    }
+    .why-book .d-flex .group{
+        gap: 2px !important;
+    }
+    .why-book .d-flex .group i{
+        margin-bottom: 2px !important;
+    }
+    .why-book .d-flex .group h5{
+        font-size: 15px;
+    }
+    .why-book .d-flex .group p{
+        font-size: .7rem !important;
+    }
+    section .activity{
+        gap: 1.5rem !important;
+    }
+    section .activity h2{
+        font-size: 20px !important;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .container .d-flex .text h4{
+        font-size: 15px !important;
+    }
+    .container .d-flex .text p{
+        font-size: 10px !important;
+    }
+    .where {
+        left: 2rem;
+        font-size: 10px !important;
+    }
+    .flexible {
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        padding: 1rem 1rem;
+    }
+    .flexible h1{
+        font-size: 15px !important;
+    }
+    .flexible p{
+        font-size: 10px !important;
+    }
+    
+    .trip {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    
+    
+    .trip .group .btn {
+        padding: .3rem .5rem;
+        font-size: 1rem;
+    }
+    .trip .group .trip-information h2{
+        font-size: 20px;
+    }
+    
+    .trip .group .trip-information p {
+        font-size: 10px;
+    }
+    
+    .trip .group .trip-information .price {
+        font-size: 20px;
+    }
+    .review .swiper-wrapper{
+        font-size: 10px !important;
+    }
+    .heading {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .heading span {
+        font-size: .5rem;
+        padding: .2rem .5rem;
+    }
+    .book .row {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+    }
+    
+    .book .row .image {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .book .row form {
+        padding: 1rem;
+    }
+    
+    .book .row form .input input {
+        border: .5rem solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .package .container {
+         display: flex;
+         flex-direction: column;
+    }
+    .package .container .box .content h3 {
+        font-size: 1rem;
+    }
+    
+    .package .container .box .content h3 i {
+        font-size: .8rem;
+    }
+    
+    .package .container .box .content p {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    .services .container{
+        gap: .5rem;
+    }
+    .services .container .box{
+        flex: 1 1 10rem;
+
+    }
+    .services .container .box h4 {
+        font-size: 1rem;
+        margin-bottom: 0px;
+    }
+    
+    .services .container .box p {
+        font-size: .7rem !important;
+    }
+    
+    
+    
+    .gallary .container .box {
+        border: .5rem solid #ffffff;
+        flex: 1 1 14rem;
+        width: 100%;
+
+    }
+   
+    .gallary .container .box .content {
+        padding: 2rem 1rem;
+    }
+    .gallary .container .box .content h3 {
+        font-size: 1rem;
+    }
+    
+    .gallary .container .box .content p {
+        font-size: .8rem !important;
+        color: #ffffff;
+        padding: .5rem 0;
+    }
+    
+    
+    
+    .review .box h3 {
+        font-size: 1rem;
+    }
+    
+    .review .box p {
+        font-size: .8rem;
+    }
+    
+    .review .box .stars i {
+        font-size: .7rem;
+    }
+    
+    
+    .contact .row {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    .contact .row form {
+        flex: 1 1 20rem;
+        padding: 2rem;
+    }
+    
+    .contact .row form .input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        
+    }
+    
+    .contact .row form .input input,
+    .contact .row form textarea {
+        width: 100%;
+    }
+    
+    .contact .row form textarea {
+        height: 10rem;
+    
+    }
+    .contact .row form .btn{
+        font-size: 1rem !important;
+    }
+    
+    .footer {
+        margin-top: 5rem;
+        padding: .5rem .5rem ;
+    }
+    .footer .d-flex{
+        gap: .3rem !important;
+    }
+    .footer .box h3 {
+       font-size: 10px !important;
+    }
+    .footer .box p{
+        font-size: 8px;
+        display: none;
+    }
+    
+    .footer .box a {
+        font-size: .5rem;
+        padding: .4rem 0;
+    }
+    .footer .box a i{
+        font-size: .5rem !important;
+    }
+
+}
+@media (min-width:320px) and (max-width:450px) {
+    .nav-bar {
+        font-size: 13px;
+    }
+    #menu-bar {
+        font-size: 1rem !important;
+        padding: 0.3rem 0.3rem !important;
+        display: block !important;
+    }
+    .logo {
+        font-size: 13px;
+    }
+    header.p-3 {
+        padding: 0.5rem!important;
+    }
+    
+    header .icon i {
+        margin-right: .6rem;
+    }
+    header .search-form {
+        padding: 0.5rem 1rem;
+        font-size: .5rem;
+    }
+   
+    .login-form #form-close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .login-form form {
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+        width: 30rem;
+    }
+    
+    .login-form form h3 {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    
+    .login-form form .box {
+        font-size: .7rem;
+    }
+    
+    
+    .login-form form label {
+        font-size: .7rem;
+    }
+    
+    .login-form form p {
+        font-size: .7rem;
+    }
+    .carousel{
+        margin-top: 2.5rem;
+    }
+    .carousel,
+    .book,
+    .activity {
+        margin-bottom: 5rem;
+    }
+    section {
+        padding: 1rem 5%;
+    }
+    .why-book h3{
+        font-size: 20px;
+    }
+    .why-book .d-flex{
+        flex-direction: column !important;
+        gap: 8px !important;
+        align-items: center !important;
+        margin-bottom: 0px !important;
+    }
+    .why-book .d-flex .group{
+        gap: 2px !important;
+    }
+    .why-book .d-flex .group i{
+        margin-bottom: 2px !important;
+    }
+    .why-book .d-flex .group h5{
+        font-size: 15px;
+    }
+    .why-book .d-flex .group p{
+        font-size: .7rem !important;
+    }
+    section .activity{
+        gap: 1.5rem !important;
+    }
+    section .activity h2{
+        font-size: 20px !important;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .container .d-flex .text h4{
+        font-size: 15px !important;
+    }
+    .container .d-flex .text p{
+        font-size: 10px !important;
+    }
+    .where {
+        left: 2.7rem;
+        font-size: 17px !important;
+    }
+    .flexible {
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        padding: 1rem 1rem;
+    }
+    .flexible h1{
+        font-size: 15px !important;
+    }
+    .flexible p{
+        font-size: 10px !important;
+    }
+    
+    .trip {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    
+    
+    .trip .group .btn {
+        padding: .3rem .5rem;
+        font-size: 1rem;
+    }
+    .trip .group .trip-information h2{
+        font-size: 20px;
+    }
+    
+    .trip .group .trip-information p {
+        font-size: 10px;
+    }
+    
+    .trip .group .trip-information .price {
+        font-size: 20px;
+    }
+    .review .swiper-wrapper{
+        font-size: 10px !important;
+    }
+    .heading {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .heading span {
+        font-size: 1rem;
+        padding: .2rem .5rem;
+    }
+    .book .row {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+    }
+    
+    .book .row .image {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .book .row form {
+        padding: 1rem;
+    }
+    
+    .book .row form .input input {
+        border: .5rem solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .package .container {
+         display: flex;
+         flex-direction: column;
+    }
+    .package .container .box .content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .package .container .box .content h3 i {
+        font-size: 1.2rem;
+    }
+    
+    .package .container .box .content p {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    .services .container{
+        gap: .5rem;
+    }
+    .services .container .box{
+        flex: 1 1 10rem;
+
+    }
+    .services .container .box h4 {
+        font-size: 1rem;
+        margin-bottom: 0px;
+    }
+    
+    .services .container .box p {
+        font-size: .7rem !important;
+    }
+    
+    
+    
+    .gallary .container .box {
+        border: .5rem solid #ffffff;
+        flex: 1 1 14rem;
+        width: 100%;
+
+    }
+   
+    .gallary .container .box .content {
+        padding: 2rem 1rem;
+    }
+    .gallary .container .box .content h3 {
+        font-size: 1rem;
+    }
+    
+    .gallary .container .box .content p {
+        font-size: .8rem !important;
+        color: #ffffff;
+        padding: .5rem 0;
+    }
+    
+    
+    
+    .review .box h3 {
+        font-size: 1rem;
+    }
+    
+    .review .box p {
+        font-size: .8rem;
+    }
+    
+    .review .box .stars i {
+        font-size: .7rem;
+    }
+    
+    
+    .contact .row {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    .contact .row form {
+        flex: 1 1 20rem;
+        padding: 2rem;
+    }
+    
+    .contact .row form .input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        
+    }
+    
+    .contact .row form .input input,
+    .contact .row form textarea {
+        width: 100%;
+    }
+    
+    .contact .row form textarea {
+        height: 10rem;
+    
+    }
+    .contact .row form .btn{
+        font-size: 1rem !important;
+    }
+    
+    .footer {
+        margin-top: 5rem;
+        padding: .5rem .5rem ;
+    }
+    .footer .d-flex{
+        gap: .3rem !important;
+    }
+    .footer .box h3 {
+       font-size: 15px !important;
+    }
+    .footer .box p{
+        font-size: 8px;
+        display: none;
+    }
+    
+    .footer .box a {
+        font-size: .8rem;
+        padding: .4rem 0;
+    }
+    .footer .box a i{
+        font-size: 1rem !important;
+    }
+
+}
+@media (min-width:451px) and (max-width:550px) {
+    .nav-bar {
+        font-size: 13px;
+    }
+    #menu-bar {
+        font-size: 1rem !important;
+        padding: 0.3rem 0.3rem !important;
+        display: block !important;
+    }
+    .logo {
+        font-size: 18px;
+    }
+    header.p-3 {
+        padding: 1rem!important;
+    }
+    
+    header .icon i {
+        margin-right: .8rem;
+    }
+    header .search-form {
+        padding: 0.5rem 1rem;
+        font-size: .5rem;
+    }
+   
+    .login-form #form-close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .login-form form {
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+        width: 30rem;
+    }
+    
+    .login-form form h3 {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    
+    .login-form form .box {
+        font-size: .7rem;
+    }
+    .login-form form label {
+        font-size: .7rem;
+    }
+    
+    .login-form form p {
+        font-size: .7rem;
+    }
+    .carousel{
+        margin-top: 2.5rem;
+    }
+    .carousel,
+    .book,
+    .activity {
+        margin-bottom: 5rem;
+    }
+    section {
+        padding: 1rem 5%;
+    }
+    .why-book h3{
+        font-size: 30px;
+    }
+    .why-book .d-flex{
+        flex-direction: column !important;
+        gap: 10px !important;
+        align-items: center !important;
+        margin-bottom: 0px !important;
+    }
+    .why-book .d-flex .group{
+        gap: 2px !important;
+    }
+    .why-book .d-flex .group i{
+        margin-bottom: 2px !important;
+    }
+    .why-book .d-flex .group h5{
+        font-size: 20px;
+    }
+    .why-book .d-flex .group p{
+        font-size: 1rem !important;
+    }
+    section .activity{
+        gap: 1.5rem !important;
+    }
+    section .activity h2{
+        font-size: 20px !important;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .container .d-flex .text h4{
+        font-size: 20px !important;
+    }
+    .container .d-flex .text p{
+        font-size: 15px !important;
+    }
+    .where {
+        left: 5.7rem;
+        font-size: 20px !important;
+    }
+    .flexible {
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        padding: 1rem 1rem;
+    }
+    .flexible h1{
+        font-size: 20px !important;
+    }
+    .flexible p{
+        font-size: 13px !important;
+    }
+    
+    .trip {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .trip .group .content-img {
+        width: 100%;
+    }
+    
+    .trip .group .btn {
+        font-size: 1rem;
+    }
+    .trip .group .trip-information h2{
+        font-size: 25px;
+    }
+    
+    .trip .group .trip-information p {
+        font-size: 15px;
+    }
+    
+    .trip .group .trip-information .price {
+        font-size: 20px;
+    }
+    .review .swiper-wrapper{
+        font-size: 10px !important;
+    }
+    .heading {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .heading span {
+        font-size: 2rem;
+    }
+    .book .row {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+    }
+    
+    .book .row .image {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .book .row form {
+        padding: 1rem;
+    }
+    
+    .book .row form .input input {
+        border: .5rem solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .package .container {
+         display: flex;
+         flex-direction: column;
+    }
+    .package .container .box .content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .package .container .box .content h3 i {
+        font-size: 1.2rem;
+    }
+    
+    .package .container .box .content p {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    .services .container{
+        gap: .5rem;
+    }
+    .services .container .box{
+        flex: 1 1 10rem;
+
+    }
+    .services .container .box h4 {
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+    }
+    
+    .services .container .box p {
+        font-size: 1rem !important;
+    }
+    
+    
+    
+    .gallary .container .box {
+        border: .5rem solid #ffffff;
+        flex: 1 1 14rem;
+        width: 100%;
+
+    }
+   
+    .gallary .container .box .content {
+        padding: 2rem 1rem;
+    }
+    .gallary .container .box .content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .gallary .container .box .content p {
+        font-size: .9rem !important;
+        color: #ffffff;
+        padding: .5rem 0;
+    }
+    
+    
+    
+    .review .box h3 {
+        font-size: 1rem;
+    }
+    
+    .review .box p {
+        font-size: .8rem;
+    }
+    
+    .review .box .stars i {
+        font-size: .7rem;
+    }
+    
+    
+    .contact .row {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    .contact .row form {
+        flex: 1 1 20rem;
+        padding: 2rem;
+    }
+    
+    .contact .row form .input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        
+    }
+    
+    .contact .row form .input input,
+    .contact .row form textarea {
+        width: 100%;
+    }
+    
+    .contact .row form textarea {
+        height: 10rem;
+    
+    }
+    .contact .row form .btn{
+        font-size: 1rem !important;
+    }
+    
+    .footer {
+        margin-top: 5rem;
+        padding: .5rem .5rem ;
+    }
+    .footer .d-flex{
+        gap: .3rem !important;
+    }
+    .footer .box h3 {
+       font-size: 15px !important;
+    }
+    .footer .box p{
+        font-size: 8px;
+        display: none;
+    }
+    
+    .footer .box a {
+        font-size: .8rem;
+        padding: .4rem 0;
+    }
+    .footer .box a i{
+        font-size: 1rem !important;
+    }
+
+}
+@media (min-width:551px) and (max-width:700px) {
+    .nav-bar {
+        font-size: 18px;
+    }
+    #menu-bar {
+        font-size: 1rem !important;
+        padding: 0.3rem 0.3rem !important;
+        display: block !important;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    header.p-3 {
+        padding: 1rem!important;
+    }
+    
+    header .icon i {
+        margin-right: .8rem;
+    }
+    header .search-form {
+        padding: 0.5rem 1rem;
+        font-size: .5rem;
+    }
+   
+    .login-form #form-close {
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .login-form form {
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+        width: 30rem;
+    }
+    
+    .login-form form h3 {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    
+    .login-form form .box {
+        font-size: .7rem;
+    }
+    .login-form form label {
+        font-size: .7rem;
+    }
+    
+    .login-form form p {
+        font-size: .7rem;
+    }
+    .carousel{
+        margin-top: 2.5rem;
+    }
+    .carousel,
+    .book,
+    .activity {
+        margin-bottom: 5rem;
+    }
+    section {
+        padding: 1rem 5%;
+    }
+    .why-book h3{
+        font-size: 35px;
+    }
+    .why-book .d-flex{
+        flex-direction: column !important;
+        gap: 10px !important;
+        align-items: center !important;
+        margin-bottom: 0px !important;
+    }
+    .why-book .d-flex .group{
+        gap: 2px !important;
+    }
+    .why-book .d-flex .group i{
+        margin-bottom: 2px !important;
+    }
+    .why-book .d-flex .group h5{
+        font-size: 20px;
+    }
+    .why-book .d-flex .group p{
+        font-size: 1rem !important;
+    }
+    section .activity{
+        gap: 1.5rem !important;
+    }
+    section .activity h2{
+        font-size: 20px !important;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .container .d-flex .text h4{
+        font-size: 20px !important;
+    }
+    .container .d-flex .text p{
+        font-size: 15px !important;
+    }
+    .where {
+        left: 5.7rem;
+        font-size: 30px !important;
+    }
+    .flexible {
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        padding: 1rem 1rem;
+    }
+    .flexible h1{
+        font-size: 20px !important;
+    }
+    .flexible p{
+        font-size: 13px !important;
+    }
+    
+    .trip {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .trip .group .content-img {
+        width: 100%;
+    }
+    
+    .trip .group .btn {
+        font-size: 1.5rem;
+    }
+    .trip .group .trip-information h2{
+        font-size: 30px;
+    }
+    
+    .trip .group .trip-information p {
+        font-size: 20px;
+    }
+    
+    .trip .group .trip-information .price {
+        font-size: 20px;
+    }
+    .heading {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .heading span {
+        font-size: 2rem;
+    }
+    .book .row {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+    }
+    
+    .book .row .image {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .book .row form {
+        padding: 1rem;
+    }
+    
+    .book .row form .input input {
+        border: .5rem solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .package .container {
+         display: flex;
+         flex-direction: column;
+    }
+    .package .container .box .content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .package .container .box .content h3 i {
+        font-size: 1.2rem;
+    }
+    
+    .package .container .box .content p {
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    .services .container{
+        gap: .5rem;
+    }
+    .services .container .box{
+        flex: 1 1 10rem;
+
+    }
+    .services .container .box h4 {
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+    }
+    
+    .services .container .box p {
+        font-size: 1rem !important;
+    }
+    
+    
+    
+    .gallary .container .box {
+        border: .5rem solid #ffffff;
+        flex: 1 1 14rem;
+        width: 100%;
+
+    }
+   
+    .gallary .container .box .content {
+        padding: 2rem 1rem;
+    }
+    .gallary .container .box .content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .gallary .container .box .content p {
+        font-size: .9rem !important;
+        color: #ffffff;
+        padding: .5rem 0;
+    }
+    
+    
+    
+    .review .box h3 {
+        font-size: 1.5rem;
+    }
+    
+    .review .box p {
+        font-size: 1rem;
+    }
+    
+    .review .box .stars i {
+        font-size: .8rem;
+    }
+    
+    
+    .contact .row {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    .contact .row form {
+        flex: 1 1 20rem;
+        padding: 2rem;
+    }
+    
+    .contact .row form .input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        
+    }
+    
+    .contact .row form .input input,
+    .contact .row form textarea {
+        width: 100%;
+    }
+    
+    .contact .row form textarea {
+        height: 10rem;
+    
+    }
+    .contact .row form .btn{
+        font-size: 1rem !important;
+    }
+    
+    .footer {
+        margin-top: 5rem;
+        padding: .5rem 1.5rem ;
+    }
+    .footer .d-flex{
+        gap: .3rem !important;
+    }
+    .footer .box h3 {
+       font-size: 20px !important;
+    }
+    .footer .box p{
+        font-size: 8px;
+        display: none;
+    }
+    
+    .footer .box a {
+        font-size: 1rem;
+        padding: .4rem 0;
+    }
+    .footer .box a i{
+        font-size: 1.3rem !important;
+    }
+
+}
+@media (min-width:700px) and (max-width:800px){
+    section {
+        padding: 1rem 5%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+   .where{
+    left: 6rem;
+   }   
+   .why-book .d-flex{
+    gap: 1rem;
+   }
+   .why-book .d-flex .group{
+    gap: .5rem;
+    width: 25%;
+   }
+   .why-book .group h5{
+    font-size: .7rem;
+    width: 100%;
+   }
+   .why-book .group p{
+    font-size: .7rem !important;
+    width: 100%;
+   }
+   .why-book .group i{
+    font-size: 1.5rem !important;
+    width: 25%;
+   }
+   .activity .container .d-flex .text h4{
+    font-size: .8rem !important;
+   }
+   .activity .container .d-flex .text p{
+    font-size: .5rem !important;
+   }
+   .flexible{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem .5rem;
+   }
+   .flexible h1{
+    font-size: 1.5rem !important;
+   }
+   .flexible p{
+    font-size: 1rem !important;
+   }
+   .trip .group .trip-information h2{
+    font-size: 1.3rem;
+   }
+   .trip .group .trip-information p{
+    font-size: .8rem;
+   }
+   .trip .group .trip-information .price{
+    font-size: 1rem;
+   }
+   .trip .group .btn {
+    padding: 0.3rem 0.6rem;
+   }
+   .btn{
+    font-size: 1rem !important;
+   }
+   .book .row form {
+    padding: 2rem;
+   }
+   .book .row form .input input{
+    border: .7rem solid rgba(0, 0, 0, 0.1);
+   }
+   .package .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem !important;
+}
+.package .container .box img {
+    height: 15rem;
+}
+.package .container .box .content h3 {
+   font-size: 1.5rem;
+}
+
+.package .container .box .content h3 i {
+   font-size: 1.4rem;
+}
+
+.package .container .box .content p {
+   font-size: 1rem;
+   padding: .5rem 0;
+}
+.gallary .container{
+    gap: 3rem;
+}
+}
+@media (min-width:800px) and (max-width:1000px){
+    .nav-bar{
+        font-size: 11px;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .where{
+        left: 12rem;
+    }
+    .why-book .d-flex{
+        gap: 1rem;
+       }
+       .why-book .d-flex .group{
+        gap: .5rem;
+        width: 25%;
+       }
+       .why-book .d-flex .group i{
+        font-size: 1.4rem !important;
+       }
+       .why-book .group h5{
+        font-size: .8rem;
+        width: 100%;
+       }
+       .why-book .group p{
+        font-size: .7rem !important;
+        width: 100%;
+       }
+       .activity .container{
+        padding: 0;
+       }
+       .activity .container .d-flex .text h4{
+        font-size: .8rem !important;
+       }
+       .activity .container .d-flex .text p{
+        font-size: .7rem !important;
+       }
+       .flexible{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 2rem .5rem;
+       }
+       .flexible h1{
+        font-size: 1.5rem !important;
+       }
+       .flexible p{
+        font-size: 1rem !important;
+       }
+       .trip .group .trip-information h2{
+        font-size: 1.3rem;
+       }
+       .trip .group .trip-information p{
+        font-size: .8rem;
+       }
+       .trip .group .trip-information .price{
+        font-size: 1rem;
+       }
+       .trip .group .btn {
+        padding: 0.3rem 0.6rem;
+       }
+       .btn{
+        font-size: 1rem !important;
+       }
+       .package .container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem !important;
+    }
+    .package .container .box img {
+        height: 15rem;
+    }
+    .package .container .box .content h3 {
+       font-size: 1.5rem;
+    }
+    
+    .package .container .box .content h3 i {
+       font-size: 1.4rem;
+    }
+    
+    .package .container .box .content p {
+       font-size: 1rem;
+       padding: .5rem 0;
+    }
+    .gallary .container{
+        gap: 3rem;
+    }
+
+}
+@media (min-width:1000px) and (max-width:1115px){
+    .nav-bar{
+        font-size: 15px;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .where{
+        left: 16rem;
+    }
+    .why-book{
+        padding: 0;
+    }
+    .why-book .d-flex{
+        gap: 1rem;
+       }
+       .why-book .d-flex .group{
+        gap: .5rem;
+        width: 25%;
+       }
+       .why-book .d-flex .group i{
+         font-size: 1.7rem !important; 
+       }
+       .why-book .group h5{
+        font-size: 1rem;
+       }
+       .why-book .group p{
+        font-size: .8rem !important;
+       }
 }
