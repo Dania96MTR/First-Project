@@ -87,28 +87,7 @@ const getTrips = async () => {
     const res = await fetch('home.json')
     const data = await res.json()
     const Data = data.Trips
-    
-    
-    const searchInp = document.querySelector("#search-inp")
-    searchInp.addEventListener("input" , filterBook)
-    function filterBook(){
-        
-        const searchInp = document.querySelector("#search-inp")
-        const filter = searchInp.value.toLowerCase()
-        const titles = document.querySelectorAll(".title")
-        titles.forEach(item =>{
-            let text = item.textContent
-            if(text.toLowerCase().includes(filter.toLowerCase())){
-                item.style.display = ''
-                console.log(text)
-            } else{
-                item.style.display = 'none'
-            }
-            
-        })
-
-    }
-    Data.forEach(ele => {
+       Data.forEach(ele => {
         trip.innerHTML += 
         `
         <div class="group d-flex flex-column align-items-start" >
